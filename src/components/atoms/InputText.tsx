@@ -8,7 +8,7 @@ import { iconConstants } from '../../assets/svgIcon';
 const InputText = () => {
     const [showPassword, setShowPassword]=useState(true)
   return (
-    <View style={{borderWidth:1,borderColor:colors.whiteTextColor,borderRadius:40,paddingHorizontal:20,paddingVertical:8,height:60,marginVertical:15,flexDirection:"row",justifyContent:"space-between"}}>
+    <View style={{borderWidth:1,borderColor:colors.whiteTextColor,borderRadius:40,paddingHorizontal:20,paddingVertical:8,marginVertical:15,flexDirection:"row",justifyContent:"space-between"}}>
         <View style={{flexDirection:"column"}}>
         <DescriptionText text='Password' textStyle={{fontSize:13,fontWeight:'500',textAlign:"left"}}/>
       <TextInput placeholder="**********"

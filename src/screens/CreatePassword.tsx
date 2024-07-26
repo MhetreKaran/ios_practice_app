@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
   screenStyle: {
     flex: 1,
     backgroundColor: colors.screenBackgroundColor,
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
   },
   imageStyle: { height: 206, width: 206 },
 });
