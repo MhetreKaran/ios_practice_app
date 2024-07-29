@@ -13,6 +13,7 @@ const PortfolioCard = () => {
         height: 129,
         width: 201,
         gap: 5,
+        marginLeft:10,
         padding: 20,
         borderRadius: 12,
       }}>

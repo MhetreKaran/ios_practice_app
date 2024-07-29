@@ -1,4 +1,4 @@
-import { Image, SafeAreaView, StyleSheet, Text, View } from 'react-native'
+import { Image,  StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { colors } from '../assets/color';
 import SmallButton from '../components/atoms/SmallButton';
@@ -6,6 +6,7 @@ import LongButton from '../components/atoms/LongButton';
 import DescriptionText from '../components/atoms/DescriptionText';
 import HeadingText from '../components/atoms/HeadingText';
 import { useNavigation } from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const SecondOnBoarding = () => {
   const navigation = useNavigation();

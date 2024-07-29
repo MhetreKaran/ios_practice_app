@@ -1,7 +1,8 @@
-import {Image, SafeAreaView, StyleSheet, Text, View} from 'react-native';
+import {Image,  StyleSheet, Text, View} from 'react-native';
 import React, {useEffect} from 'react';
 import {colors} from '../assets/color';
 import {CommonActions, useNavigation} from '@react-navigation/native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 const SplashScreen = () => {
   const navigation = useNavigation();

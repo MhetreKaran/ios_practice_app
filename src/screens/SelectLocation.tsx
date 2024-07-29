@@ -1,9 +1,10 @@
-import { Image, SafeAreaView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Image,  StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import { colors } from '../assets/color'
 import LongButton from '../components/atoms/LongButton'
 import { useNavigation } from '@react-navigation/native'
 import CommonHeader from '../components/atoms/CommonHeader'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const SelectLocation = () => {
   const navigation = useNavigation();

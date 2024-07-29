@@ -1,4 +1,4 @@
-import { SafeAreaView, StyleSheet, Text, TextInput, View } from 'react-native'
+import {  StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import { colors } from '../assets/color'
 import CommonHeader from '../components/atoms/CommonHeader'
@@ -7,6 +7,7 @@ import InputText from '../components/atoms/InputText'
 import Icon from '../components/atoms/Icon'
 import { iconConstants } from '../assets/svgIcon'
 import LongButton from '../components/atoms/LongButton'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const ForgetPassword = () => {
   const navigation = useNavigation();

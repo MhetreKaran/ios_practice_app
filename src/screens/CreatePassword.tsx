@@ -1,6 +1,6 @@
 import {
   Image,
-  SafeAreaView,
+  
   StatusBar,
   StyleSheet,
   Text,
@@ -17,6 +17,7 @@ import CommonHeader from "../components/atoms/CommonHeader";
 import InputText from "../components/atoms/InputText";
 import LongButton from "../components/atoms/LongButton";
 import { useNavigation } from "@react-navigation/native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const CreatePassword = () => {
   const navigation = useNavigation();

@@ -1,10 +1,11 @@
-import { Image, SafeAreaView, StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
+import { Image,  StatusBar, StyleSheet, Text, TextInput, View } from 'react-native'
 import React from 'react'
 import LongButton from '../components/atoms/LongButton'
 import DescriptionText from '../components/atoms/DescriptionText'
 import { colors } from '../assets/color'
 import { useNavigation } from '@react-navigation/native'
 import CommonHeader from '../components/atoms/CommonHeader'
+import { SafeAreaView } from 'react-native-safe-area-context'
 
 const OtpVerification = () => {
   const navigation = useNavigation();

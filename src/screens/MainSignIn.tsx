@@ -1,6 +1,8 @@
 import {
   Image,
-  SafeAreaView,
+  KeyboardAvoidingView,
+  Platform,
+  ScrollView,
   StatusBar,
   StyleSheet,
   Text,
@@ -14,6 +16,7 @@ import {CommonActions, useNavigation} from '@react-navigation/native';
 import CommonHeader from '../components/atoms/CommonHeader';
 import Icon from '../components/atoms/Icon';
 import {iconConstants} from '../assets/svgIcon';
+import { SafeAreaView } from 'react-native-safe-area-context';
 const MainSignIn = () => {
   const navigation = useNavigation();
   const handleSignIn = () => {
@@ -36,9 +39,9 @@ const MainSignIn = () => {
         descText="Choose a secure password that will be easy for you to remember."
       />
       <View style={styles.container}>
-        <View style={{width: '95%', gap: 10,marginVertical:30, alignItems: 'center'}}>
-          <TextInput style={styles.inputStyle} />
-            <Icon
+        <KeyboardAvoidingView style={{width: '95%', gap: 10,marginVertical:20, alignItems: 'center'}}>
+          <TextInput scrollEnabled={true} style={styles.inputStyle} />
+            {/* <Icon
               iconName={iconConstants.mail}
               size={25}
               color={'none'}
@@ -51,9 +54,9 @@ const MainSignIn = () => {
                 top:10,
               }}
               onPress={()=>{}}
-            />
+            /> */}
           <TextInput style={styles.inputStyle} />
-            <Icon
+            {/* <Icon
               iconName={iconConstants.lock}
               size={25}
               color={'none'}
@@ -66,26 +69,29 @@ const MainSignIn = () => {
                 left:50,
               }}
               onPress={()=>{}}
-            />
-        </View>
-        <View style={{flexDirection: 'row',marginBottom:10,columnGap:80, alignContent: 'space-between'}}>
-          <Text style={{color: 'white'}}>Remember Me</Text>
+            /> */}
+        </KeyboardAvoidingView>
+        <View style={{flexDirection: 'row',marginBottom:10,columnGap:60, alignContent: 'space-between'}}>
+          <Text style={{color: colors.whiteTextColor,fontWeight:'400',fontSize:16}}>Remember Me</Text>
           <Text
             onPress={() => navigation.navigate('ForgetPassword')}
-            style={{color: 'orange'}}>
-            Forget Password
+            style={{color: '#FDAE67',fontSize:16,fontWeight:'400'}}>
+            Forget Password ?
           </Text>
         </View>
         <LongButton text={'Sign In'} onPress={() => handleSignIn()} />
-        <View style={{flexDirection: 'row',position:'absolute',bottom:40, justifyContent: 'flex-end'}}>
-          <Text style={{color: 'white'}}>Already have not an account ? </Text>
+        
+      </View>
+      
+     
+      <View style={{flexDirection: 'row',paddingBottom:20, justifyContent: 'center'}}>
+          <Text style={{color: 'white',marginRight:8, fontSize:16, fontWeight:'500'}}>Already have not an account ? </Text>
           <Text
             onPress={() => navigation.navigate('SignInScreen')}
-            style={{color: 'orange'}}>
-            Sign up!
+            style={{color: '#FDAE67',fontSize:16,fontWeight:'500'}}>
+            Sign up !
           </Text>
         </View>
-      </View>
     </SafeAreaView>
   );
 };
@@ -96,6 +102,7 @@ const styles = StyleSheet.create({
   screenStyle: {
     flex: 1,
     backgroundColor: colors.screenBackgroundColor,
+    justifyContent:'space-between',
     paddingHorizontal: 20,
   },
   container: {
@@ -105,6 +112,8 @@ const styles = StyleSheet.create({
   },
   inputStyle: {
     width: '80%',
+    color:colors.whiteTextColor,
+    padding:Platform.OS==='ios'?15:10,
     borderRadius: 20,
     backgroundColor: colors.cardBackgroundColor,
   },

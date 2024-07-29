@@ -1,4 +1,5 @@
 import { colors } from "../assets/color";
+import { iconConstants } from "../assets/svgIcon";
 
 export const arrData=[
     {
@@ -24,5 +25,24 @@ export const arrData=[
       walletPrze:'$787684.40',
       weeklyPrze:'$13098.78',
       percentage:'+13%'
+    },
+  ]
+
+  export const iconData = [
+    {
+      iconName:iconConstants.send2,
+      title:'Send'
+    },
+    {
+      iconName:iconConstants.receive2,
+      title:'Receive'
+    },
+    {
+      iconName:iconConstants.buy2,
+      title:'Buy'
+    },
+    {
+      iconName:iconConstants.swap2,
+      title:'Swap'
     },
   ]

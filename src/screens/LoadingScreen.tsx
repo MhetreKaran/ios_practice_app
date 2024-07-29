@@ -1,6 +1,6 @@
 import {
   Image,
-  SafeAreaView,
+  
   StatusBar,
   StyleSheet,
   Text,

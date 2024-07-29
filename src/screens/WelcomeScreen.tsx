@@ -1,10 +1,10 @@
 import {
   Image,
-  SafeAreaView,
   StatusBar,
   StyleSheet,
   Text,
   View,
+  Dimensions,
 } from "react-native";
 import React from "react";
 import { colors } from "../assets/color";
@@ -12,7 +12,10 @@ import HeadingText from "../components/atoms/HeadingText";
 import DescriptionText from "../components/atoms/DescriptionText";
 import LongButton from "../components/atoms/LongButton";
 import { useNavigation } from "@react-navigation/native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
+const width = Dimensions.get('screen').width;
+const height = Dimensions.get('screen').height;
 const WelcomeScreen = () => {
   const navigation = useNavigation();
 
@@ -90,5 +93,5 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     marginVertical: 40,
   },
-  mainView: { flex: 1, alignItems: "center", width: "100%" },
+  mainView: { flex: 1, alignItems: "center", width: "100%", },
 });

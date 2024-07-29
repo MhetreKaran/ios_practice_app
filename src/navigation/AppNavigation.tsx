@@ -16,6 +16,8 @@ import WelcomeScreen from '../screens/WelcomeScreen';
 import HomeScreen from '../screens/HomeScreen';
 import { colors } from '../assets/color';
 import BottomNavigation from './BottomNavigation';
+import Portfolio from '../screens/Portfolio';
+import MarketScreen from '../screens/MarketScreen';
 
 const AppNavigation = () => {
   const Stack = createNativeStackNavigator();
@@ -34,6 +36,8 @@ const AppNavigation = () => {
         <Stack.Screen name='SelectLocation' component={SelectLocation} />
         <Stack.Screen name='HomeScreen' component={HomeScreen} />
         <Stack.Screen name='BottomNavigation' component={BottomNavigation} />
+        <Stack.Screen name='Portfolio' component={Portfolio} />
+        <Stack.Screen name='MarketScreen' component={MarketScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )
