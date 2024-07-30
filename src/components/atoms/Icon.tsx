@@ -21,7 +21,7 @@ export interface RevIconProp {
 	width?: number;
 	noStroke?: boolean;
 	fillColor?: string;
-	onPress?: () => void;
+	onPress?: Function;
 	strokeWidth?: string;
 	text?: string;
 }

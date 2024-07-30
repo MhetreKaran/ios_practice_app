@@ -25,8 +25,11 @@ const OtpVerification = () => {
           <TextInput style={styles.inputStyle} ><Text style={{ color: 'white' }}></Text></TextInput>
           <TextInput style={styles.inputStyle} ><Text style={{ color: 'white' }}></Text></TextInput>
         </View>
+        <View style={{flexDirection:'row'}}>
         <DescriptionText text={`I didn't receive code.`} />
-        <Text style={{ color: 'white' }}>Resend Code</Text>
+        <Text style={{ color: '#FE8270',textAlign:'center',fontWeight:'700',fontSize:16 }}>Resend Code</Text>
+        </View>
+        <Text style={{color:'#4DE0D9',fontWeight:'500',fontSize:16}}>1:20 Sec left</Text>
         <LongButton onPress={() => navigation.navigate('CreatePassword')} text='Continue' />
       </View>
     </SafeAreaView>
@@ -39,7 +42,7 @@ const styles = StyleSheet.create({
   screenStyle: {
     flex: 1,
     paddingHorizontal: 20,
-    backgroundColor: colors.screenBackgroundColor
+    backgroundColor: colors.cardBackgroundColor
   },
   container: {
     flex: 1,
@@ -52,7 +55,7 @@ const styles = StyleSheet.create({
     width: 60,
     height:60,
     borderRadius: 50,
-    backgroundColor: colors.cardBackgroundColor,
+    backgroundColor: colors.darkBGColor,
   },
   topHeaderText: {
     textAlign: 'center',

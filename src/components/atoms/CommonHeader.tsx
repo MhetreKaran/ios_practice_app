@@ -38,8 +38,7 @@ const CommonHeader = (props: commonHeaderProps) => {
         />
         <View
           style={{
-            position: "absolute",
-            width: "100%"
+            width: "70%"
             , height: "100%",
             justifyContent: "center"
           }}
@@ -60,7 +59,7 @@ const CommonHeader = (props: commonHeaderProps) => {
         style={styles.imageStyle}
       />
       {props.descText && <DescriptionText
-        textStyle={{ marginTop: 15 }}
+        textStyle={{ marginTop: 15,fontWeight:'400',fontSize:16, color:'#A6A3B8' }}
         text={
           `${props?.descText}`
         }

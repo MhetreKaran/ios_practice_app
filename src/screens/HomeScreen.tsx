@@ -1,4 +1,4 @@
-import {FlatList, ScrollView,  StyleSheet, Text, View} from 'react-native';
+import {FlatList, ScrollView, StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {colors} from '../assets/color';
 import BalanceCard from '../components/molecules/BalanceCard';
@@ -14,7 +14,6 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {useNavigation} from '@react-navigation/native';
 import MarketCard from '../components/atoms/MarketCard';
 
-
 const HomeScreen = () => {
   const navigation = useNavigation();
   const renderItem = ({item}) => (
@@ -29,36 +28,37 @@ const HomeScreen = () => {
   );
   return (
     <SafeAreaView style={styles.screenStyle}>
-      <ScrollView
-        scrollEnabled={true}
-       
-        showsVerticalScrollIndicator={false}>
+      <ScrollView scrollEnabled={true} showsVerticalScrollIndicator={false}>
         <View
           style={{
             marginHorizontal: 16,
+            marginTop:16,
             flexDirection: 'row',
             justifyContent: 'space-between',
           }}>
           <Icon
             iconName={iconConstants.menuLeft}
-            size={35}
+            size={24}
             containerStyle={{
-              width: 31,
-              height: 21,
+              // width: 31,
+              // height: 21,
             }}
             fillColor={'#363D4E'}
             color="#363D4E"
             viewBox="0 0 30 21"
-            onPress={navigation.goBack}
+            onPress={() => navigation.goBack()}
           />
           <Icon
             iconName={iconConstants.notification}
-            size={34}
+            size={24}
             noStroke={true}
             containerStyle={{
-              width: 20,
-              height: 22,
-              marginHorizontal: 10,
+              // width: 20,
+              // height: 22,
+              // marginHorizontal: 10,
+              padding:10,
+              borderRadius:12,
+              backgroundColor: '#191C26',
             }}
             viewBox="0 0 20 22"
             onPress={navigation.goBack}
@@ -68,7 +68,6 @@ const HomeScreen = () => {
           style={{
             flexDirection: 'column',
             alignItems: 'flex-start',
-            paddingVertical: 30,
           }}>
           <HeadingText
             text="Hi Alex Smith"
@@ -107,18 +106,19 @@ const HomeScreen = () => {
               justifyContent: 'space-between',
               margin: 10,
             }}>
-            <Text style={{color: 'white', fontWeight: '500', fontSize: 20}} onPress={()=>navigation.navigate('Portfolio')}>
+            <Text
+              style={{color: 'white', fontWeight: '500', fontSize: 20}}
+              onPress={() => navigation.navigate('Portfolio')}>
               Portfolio
             </Text>
-            <Text style={{color: 'grey', fontWeight: '500', fontSize: 15}}>
+            <Text style={{color: 'grey', fontWeight: '500', fontSize: 15}} onPress={()=>navigation.navigate('Portfolio')}>
               View All+
             </Text>
           </View>
           <FlatList
             showsHorizontalScrollIndicator={false}
-            ItemSeparatorComponent={<View style={{marginLeft: 10}}></View>}
             data={[1, 1, 1, 1]}
-            renderItem={({item}) => <PortfolioCard />}
+            renderItem={({item,index}) => <PortfolioCard />}
             horizontal
           />
         </View>
@@ -126,6 +126,7 @@ const HomeScreen = () => {
           <FlatList
             data={iconData}
             horizontal={true}
+            showsHorizontalScrollIndicator={false}
             renderItem={({item, index}) => {
               return (
                 <View
@@ -161,20 +162,29 @@ const HomeScreen = () => {
           />
         </View>
         <View>
-        <View
+          <View
             style={{
               flexDirection: 'row',
               justifyContent: 'space-between',
               margin: 10,
             }}>
-            <Text style={{color: 'white', fontWeight: '500', fontSize: 20}} onPress={()=>navigation.navigate('MarketScreen')}>
-            Market
+            <Text
+              style={{color: 'white', fontWeight: '500', fontSize: 20}}
+              onPress={() => navigation.navigate('MarketScreen')}>
+              Market
             </Text>
-            <Text style={{color: 'grey', fontWeight: '500', fontSize: 15}}>
+            <Text onPress={() => navigation.navigate('MarketScreen')} style={{color: 'grey', fontWeight: '500', fontSize: 15}}>
               View All+
             </Text>
           </View>
-          <MarketCard />
+          <MarketCard
+            iconName={iconConstants.coin}
+            coinName={'Achain'}
+            initialChar={'ACH'}
+            price={'$15,813.20'}
+            profitOrLoss={'-3.84%'}
+            containerStyle={{marginBottom:16,marginHorizontal:12}}
+          />
         </View>
       </ScrollView>
     </SafeAreaView>
@@ -187,7 +197,6 @@ const styles = StyleSheet.create({
   screenStyle: {
     flex: 1,
     backgroundColor: colors.screenBackgroundColor,
-    paddingVertical:20,
-    
+    // paddingVertical:20,
   },
 });

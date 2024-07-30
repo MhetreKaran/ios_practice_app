@@ -20,17 +20,16 @@ export default SmallButton
 
 const styles = StyleSheet.create({
   btnContainer: {
-    width: 80,
-    backgroundColor: colors.pinkButtonColor,
+    width: 57,
+    height:24,
+    backgroundColor: '#34D9D1',
     borderRadius: 50,
     justifyContent: 'center',
-    paddingHorizontal: 16,
-    paddingVertical: 8
   },
   textStyle: {
     textAlign: 'center',
     color: colors.whiteTextColor,
     fontWeight: '400',
-    fontSize: 18
+    fontSize: 12
   }
 })

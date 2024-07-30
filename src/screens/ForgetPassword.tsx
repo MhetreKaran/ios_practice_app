@@ -1,4 +1,4 @@
-import {  StyleSheet, Text, TextInput, View } from 'react-native'
+import {  StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { colors } from '../assets/color'
 import CommonHeader from '../components/atoms/CommonHeader'
@@ -18,7 +18,7 @@ const ForgetPassword = () => {
       imagesrc={require("../assets/images/Illustration5.png")} 
       descText='We will send a mail to the email address you registered to regain your password' 
       goBackFunction={() => navigation.goBack()} />
-      <View style={{position:'relative'}}>
+      {/* <View style={{position:'relative'}}>
       <TextInput style={styles.inputStyle} />
             <Icon
               iconName={iconConstants.mail}
@@ -34,8 +34,46 @@ const ForgetPassword = () => {
               }}
               onPress={()=>{}}
             />
-            </View>
-            <LongButton text='Send'/>
+            </View> */}
+             <View
+          style={{
+            flexDirection: 'row',
+            backgroundColor: colors.cardBackgroundColor,
+            borderRadius: 50,
+            paddingHorizontal: 25,
+            paddingVertical: 16,
+            marginVertical: 20,
+          }}>
+          <Icon
+            iconName={iconConstants.mail}
+            viewBox="0 0 19 15"
+            size={25}
+            noStroke={'none'}
+          />
+          <TextInput
+            placeholder="johndoe@mail.com"
+            placeholderTextColor={colors.whiteTextColor}
+            style={{
+              flex: 1,
+              paddingLeft: 14,
+              fontWeight: '400',
+              fontSize: 14,
+              color: colors.whiteTextColor,
+            }}
+          />
+        </View>
+        <Text style={{color:'#FE8270',fontWeight:'400',fontSize:16,textAlign:'center'}}>Email sent to ex*****@gmail.com</Text>
+        <TouchableOpacity
+      style={styles.btnContainer}
+     
+    >
+      <Text
+       
+        style={styles.textStyle}
+      >
+        Send
+      </Text>
+    </TouchableOpacity>
     </SafeAreaView>
   )
 }
@@ -56,5 +94,19 @@ const styles = StyleSheet.create({
     marginVertical:20,
     borderRadius: 20,
     backgroundColor: colors.cardBackgroundColor,
+  },
+  btnContainer: {
+    width:'100%',
+    backgroundColor: colors.blueLongButtonColor,
+    borderRadius: 50,
+    padding: 16,
+    marginTop:16
+  },
+  textStyle: {
+    textAlign: "center",
+    color: colors.whiteTextColor,
+    fontWeight: "700",
+    fontSize: 18,
+    width: "100%",
   },
 })

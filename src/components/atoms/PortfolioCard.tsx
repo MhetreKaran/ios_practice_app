@@ -17,25 +17,23 @@ const PortfolioCard = () => {
         padding: 20,
         borderRadius: 12,
       }}>
-      <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+      <View style={{flexDirection: 'row',justifyContent:'space-between',alignItems:'center'}}>
         <Icon
           iconName={iconConstants.ethernetIcon}
-          size={45}
+          size={30}
           color={'none'}
           viewBox="0 0 34 36"
           containerStyle={{
-            height: 45,
-            width: 45,
+            alignSelf:'center',
           }}
         />
-
+          <Text style={{fontSize:14,fontWeight:'500', color:'#A6A3B8'}}>Ethereum</Text>
         <SmallButton
           text={'+2.40%'}
-          containerStyle={{width: 100, paddingHorizontal: 0}}
-        />
+          containerStyle={{}} onPress={()=>{}}        />
       </View>
-      <Text style={{color: 'white'}}>$61,671.50</Text>
-      <Text style={{color: 'grey'}}>ETH</Text>
+      <Text style={{color: 'white',fontSize:24,fontWeight:'700'}}>$61,671.50</Text>
+      <Text style={{fontSize:12,fontWeight:'500', color:'#A6A3B8'}}>ETH</Text>
     </View>
   );
 };
