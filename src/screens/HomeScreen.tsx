@@ -61,7 +61,7 @@ const HomeScreen = () => {
               backgroundColor: '#191C26',
             }}
             viewBox="0 0 20 22"
-            onPress={navigation.goBack}
+            onPress={()=>navigation.navigate('NotificationScreen')}
           />
         </View>
         <View

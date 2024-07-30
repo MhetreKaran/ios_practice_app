@@ -27,99 +27,101 @@ const MainSignIn = () => {
     //     routes: [{name: 'BottomNavigation'}],
     //   }),
     // );
-    navigation.navigate('BottomNavigation')
+    navigation.navigate('BottomNavigation');
   };
   return (
     <SafeAreaView style={styles.screenStyle}>
-      {/* <ScrollView> */}
-      <StatusBar backgroundColor={colors.screenBackgroundColor} />
-      <CommonHeader
-        goBackFunction={() => {
-          navigation.goBack();
-        }}
-        headingText="Sign In"
-        imagesrc={require('../assets/images/signIn.png')}
-      />
-      
-      <View style={styles.container}>
-        <View
-          style={{
-            flexDirection: 'row',
-            backgroundColor: colors.cardBackgroundColor,
-            borderRadius: 50,
-            paddingHorizontal: 25,
-            paddingVertical: 16,
-            marginBottom: 10,
-          }}>
-          <Icon
-            iconName={iconConstants.mail}
-            viewBox="0 0 19 15"
-            size={25}
-            noStroke={'none'}
-          />
-          <TextInput
-            placeholder="johndoe@mail.com"
-            placeholderTextColor={colors.whiteTextColor}
-            style={{
-              flex: 1,
-              paddingLeft: 14,
-              fontWeight: '400',
-              fontSize: 14,
-              color: colors.whiteTextColor,
-            }}
-          />
-        </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            backgroundColor: colors.cardBackgroundColor,
-            borderRadius: 50,
-            paddingHorizontal: 25,
-            paddingVertical: 16,
-            marginBottom: 20,
-          }}>
-          <Icon
-            iconName={iconConstants.lock}
-            viewBox="0 0 18 20"
-            size={25}
-            noStroke={'none'}
-          />
-          <TextInput
-            placeholder="*********************"
-            placeholderTextColor={colors.whiteTextColor}
-            style={{
-              flex: 1,
-              paddingLeft: 14,
-              fontWeight: '400',
-              fontSize: 14,
-              color: colors.whiteTextColor,
-            }}
-          />
-        </View>
-        <View
-          style={{
-            flexDirection: 'row',
-            marginBottom: 10,
-            columnGap: 60,
-            alignContent: 'space-between',
-          }}>
-          <Text
-            style={{
-              color: colors.whiteTextColor,
-              fontWeight: '400',
-              fontSize: 16,
-            }}>
-            Remember Me
-          </Text>
-          <Text
-            onPress={() => navigation.navigate('ForgetPassword')}
-            style={{color: '#FDAE67', fontSize: 16, fontWeight: '400'}}>
-            Forget Password ?
-          </Text>
-        </View>
-        <LongButton text={'Sign In'} onPress={() => handleSignIn()} />
-      </View>
+     
+        <StatusBar backgroundColor={colors.screenBackgroundColor} />
+        <CommonHeader
+          goBackFunction={() => {
+            navigation.goBack();
+          }}
+          headingText="Sign In"
+          imagesrc={require('../assets/images/signIn.png')}
+        />
 
+        <View style={styles.container}>
+        <KeyboardAvoidingView style={{width:'100%'}}>
+          <View
+            style={{
+              flexDirection: 'row',
+              backgroundColor: colors.cardBackgroundColor,
+              borderRadius: 50,
+              paddingHorizontal: 25,
+              paddingVertical: 16,
+              marginBottom: 10,
+            }}>
+            <Icon
+              iconName={iconConstants.mail}
+              viewBox="0 0 19 15"
+              size={25}
+              noStroke={'none'}
+            />
+            <TextInput
+              placeholder="johndoe@mail.com"
+              placeholderTextColor={colors.whiteTextColor}
+              style={{
+                flex: 1,
+                paddingLeft: 14,
+                fontWeight: '400',
+                fontSize: 14,
+                color: colors.whiteTextColor,
+              }}
+            />
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              backgroundColor: colors.cardBackgroundColor,
+              borderRadius: 50,
+              paddingHorizontal: 25,
+              paddingVertical: 16,
+              marginBottom: 20,
+            }}>
+            <Icon
+              iconName={iconConstants.lock}
+              viewBox="0 0 18 20"
+              size={25}
+              noStroke={'none'}
+            />
+            <TextInput
+              placeholder="*********************"
+              placeholderTextColor={colors.whiteTextColor}
+              style={{
+                flex: 1,
+                paddingLeft: 14,
+                fontWeight: '400',
+                fontSize: 14,
+                color: colors.whiteTextColor,
+              }}
+            />
+          </View>
+          </KeyboardAvoidingView>
+          <View
+            style={{
+              flexDirection: 'row',
+              marginBottom: 10,
+              columnGap: 60,
+              alignContent: 'space-between',
+            }}>
+            <Text
+              style={{
+                color: colors.whiteTextColor,
+                fontWeight: '400',
+                fontSize: 16,
+              }}>
+              Remember Me
+            </Text>
+            <Text
+              onPress={() => navigation.navigate('ForgetPassword')}
+              style={{color: '#FDAE67', fontSize: 16, fontWeight: '400'}}>
+              Forget Password ?
+            </Text>
+          </View>
+          <LongButton text={'Sign In'} onPress={() => handleSignIn()} />
+        </View>
+     
       <View
         style={{
           flexDirection: 'row',
@@ -141,7 +143,6 @@ const MainSignIn = () => {
           Sign up !
         </Text>
       </View>
-      {/* </ScrollView> */}
     </SafeAreaView>
   );
 };

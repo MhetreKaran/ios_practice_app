@@ -18,6 +18,7 @@ import { colors } from '../assets/color';
 import BottomNavigation from './BottomNavigation';
 import Portfolio from '../screens/Portfolio';
 import MarketScreen from '../screens/MarketScreen';
+import NotificationScreen from '../screens/NotificationScreen';
 
 const AppNavigation = () => {
   const Stack = createNativeStackNavigator();
@@ -38,6 +39,7 @@ const AppNavigation = () => {
         <Stack.Screen name='BottomNavigation' component={BottomNavigation} />
         <Stack.Screen name='Portfolio' component={Portfolio} />
         <Stack.Screen name='MarketScreen' component={MarketScreen} />
+        <Stack.Screen name='NotificationScreen' component={NotificationScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )
