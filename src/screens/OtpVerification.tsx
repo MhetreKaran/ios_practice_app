@@ -20,10 +20,10 @@ const OtpVerification = () => {
       />
       <View style={styles.container}>
         <View style={{ flexDirection: 'row',gap:20 }}>
-          <TextInput style={styles.inputStyle} ><Text style={{ color: 'white' }}>8</Text></TextInput>
-          <TextInput style={styles.inputStyle} ><Text style={{ color: 'white' }}></Text></TextInput>
-          <TextInput style={styles.inputStyle} ><Text style={{ color: 'white' }}></Text></TextInput>
-          <TextInput style={styles.inputStyle} ><Text style={{ color: 'white' }}></Text></TextInput>
+          <TextInput style={styles.inputStyle} keyboardType='number-pad' placeholder='8' placeholderTextColor={colors.whiteTextColor} />
+          <TextInput style={styles.inputStyle} keyboardType='number-pad' />
+          <TextInput style={styles.inputStyle} keyboardType='number-pad'/>
+          <TextInput style={styles.inputStyle} keyboardType='number-pad'/>
         </View>
         <View style={{flexDirection:'row'}}>
         <DescriptionText text={`I didn't receive code.`} />
@@ -54,6 +54,7 @@ const styles = StyleSheet.create({
     textAlign:'center',
     width: 60,
     height:60,
+    color:colors.whiteTextColor,
     borderRadius: 50,
     backgroundColor: colors.darkBGColor,
   },

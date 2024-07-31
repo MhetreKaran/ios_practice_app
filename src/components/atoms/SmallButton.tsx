@@ -1,17 +1,18 @@
-import { StyleSheet, Text, TouchableOpacity, View, ViewStyle } from 'react-native'
+import { StyleSheet, Text, TextStyle, TouchableOpacity, View, ViewStyle } from 'react-native'
 import React from 'react'
 import { colors } from '../../assets/color'
 
 interface smallButtonProps {
   text: String,
-  containerStyle: ViewStyle,
-  onPress:Function
+  containerStyle?: ViewStyle,
+  onPress?:Function,
+  textStyle?:TextStyle
 }
 
 const SmallButton = (props: smallButtonProps) => {
   return (
     <TouchableOpacity onPress={props?.onPress} style={[styles.btnContainer, props.containerStyle]}>
-      <Text style={styles.textStyle}>{props.text}</Text>
+      <Text style={[styles.textStyle,props.textStyle]}>{props.text}</Text>
     </TouchableOpacity>
   )
 }

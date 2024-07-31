@@ -19,6 +19,10 @@ import BottomNavigation from './BottomNavigation';
 import Portfolio from '../screens/Portfolio';
 import MarketScreen from '../screens/MarketScreen';
 import NotificationScreen from '../screens/NotificationScreen';
+import Setting from '../screens/Setting';
+import ScanQRScreen from '../screens/ScanQRScreen';
+import ProfileDetailsScreen from '../screens/ProfileDetailsScreen';
+import CoinScreen from '../screens/CoinScreen';
 
 const AppNavigation = () => {
   const Stack = createNativeStackNavigator();
@@ -40,6 +44,10 @@ const AppNavigation = () => {
         <Stack.Screen name='Portfolio' component={Portfolio} />
         <Stack.Screen name='MarketScreen' component={MarketScreen} />
         <Stack.Screen name='NotificationScreen' component={NotificationScreen} />
+        <Stack.Screen name='Setting' component={Setting} />
+        <Stack.Screen name='ScanQRScreen' component={ScanQRScreen} />
+        <Stack.Screen name='ProfileDetailsScreen' component={ProfileDetailsScreen} />
+        <Stack.Screen name='CoinScreen' component={CoinScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )

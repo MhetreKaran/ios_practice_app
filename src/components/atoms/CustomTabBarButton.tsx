@@ -1,4 +1,4 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View,Platform } from 'react-native'
 import React from 'react'
 import Icon from './Icon';
 import { iconConstants } from '../../assets/svgIcon';
@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
     customButton:{
         justifyContent: 'space-evenly',
         alignItems: 'center',
-        marginHorizontal:22
+        marginHorizontal:Platform.OS==='ios'?23:26,
 
     },
     buttonText:{}

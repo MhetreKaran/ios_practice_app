@@ -136,3 +136,63 @@ export const arrData=[
       profitOrLoss:'-3.84%'
     },
   ]
+
+  export const notificationData = [
+    {
+      iconName:iconConstants.cross,
+      title:'ETH received',
+      description:'0.08 ETH Received',
+      days:'2 days ago'
+    },
+    {
+      iconName:iconConstants.cross,
+      title:'Payment',
+      description:'Thank you! Your transaction is com...',
+      days:''
+    },
+    {
+      iconName:iconConstants.promotion,
+      title:'Promotion',
+      description:'Invite friends - Get 1 coupons each!',
+      days:''
+    },
+    {
+      iconName:iconConstants.checkCoin,
+      title:'New Coin',
+      description:'New bid 0.2 ETH',
+      days:'5 days ago'
+    },
+    {
+      iconName:iconConstants.cross,
+      title:'Payment',
+      description:'Thank you! Your transaction is com...',
+      days:''
+    },
+  ]
+
+  export const coinDetails = [
+    {
+      title:'Market Cap',
+      price:'20,351.00 BTC'
+    },
+    {
+      title:'Volume (24 hours)',
+      price:'$98,669.59'
+    },
+    {
+      title:'Available Supply',
+      price:'15.897.198'
+    },
+    {
+      title:'Total Supply',
+      price:'27.6412.348'
+    },
+    {
+      title:'Low (24 hours)',
+      price:'$54,987.12'
+    },
+    {
+      title:'High (24 hours)',
+      price:'14,147.96'
+    },
+  ]

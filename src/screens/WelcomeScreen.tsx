@@ -14,10 +14,11 @@ import LongButton from "../components/atoms/LongButton";
 import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const width = Dimensions.get('screen').width;
-const height = Dimensions.get('screen').height;
+const width = Dimensions.get('window').width;
+const height = Dimensions.get('window').height;
 const WelcomeScreen = () => {
   const navigation = useNavigation();
+console.log('dimension',width,height);
 
   return (
     <SafeAreaView style={styles.screenStyle}>
@@ -82,7 +83,7 @@ const styles = StyleSheet.create({
     backgroundColor: colors.lightPurple,
     marginVertical: 20,
   },
-  textView: { width: "70%", alignItems: "center" },
+  textView: { width: "80%", alignItems: "center" },
   imageStyle: { height: 206, width: 206 },
   imageView: {
     width: "80%",

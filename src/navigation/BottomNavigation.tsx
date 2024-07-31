@@ -8,9 +8,11 @@ import {colors} from '../assets/color';
 import CustomTabBarButton from '../components/atoms/CustomTabBarButton';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { iconConstants } from '../assets/svgIcon';
+import { useNavigation } from '@react-navigation/native';
 
 const Tab = createBottomTabNavigator();
 const BottomNavigation = () => {
+  const navigation = useNavigation();
   return (
     <Tab.Navigator
     screenOptions={{
@@ -20,9 +22,9 @@ const BottomNavigation = () => {
       }}
       >
       <Tab.Screen
-        name="HomeScreen"
+        name="MainScreen"
         options={{
-            tabBarButton: (props) => <CustomTabBarButton onPress={() => { } } text={'Home'} iconName={iconConstants.home} size={25} viewBox='0 0 22 24' />,
+            tabBarButton: (props) => <CustomTabBarButton onPress={() => {navigation.navigate('MainScreen')  } } text={'Home'} iconName={iconConstants.home} size={25} viewBox='0 0 22 24' />,
           }}
         component={HomeScreen}
       />
@@ -30,7 +32,7 @@ const BottomNavigation = () => {
 <Tab.Screen
         name="WalletScreen"
         options={{
-            tabBarButton: (props) => <CustomTabBarButton onPress={() => { } } text={'Home'} iconName={iconConstants.wallet} size={25} viewBox='0 0 22 24' />,
+            tabBarButton: (props) => <CustomTabBarButton onPress={() => {} } text={'Home'} iconName={iconConstants.wallet} size={25} viewBox='0 0 22 24' />,
           }}
         component={HomeScreen}
       />
@@ -51,9 +53,9 @@ const BottomNavigation = () => {
       <Tab.Screen
         name="SettingScreen"
         options={{
-            tabBarButton: (props) => <CustomTabBarButton onPress={() => { } } text={'Home'} iconName={iconConstants.setting} size={25} viewBox='0 0 22 24' />,
+            tabBarButton: (props) => <CustomTabBarButton onPress={() => {navigation.navigate('Setting') } } text={'Home'} iconName={iconConstants.setting} size={25} viewBox='0 0 22 24' />,
           }}
-        component={HomeScreen}
+        component={Setting}
       />
     </Tab.Navigator>
   );

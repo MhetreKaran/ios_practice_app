@@ -31,7 +31,6 @@ const MainSignIn = () => {
   };
   return (
     <SafeAreaView style={styles.screenStyle}>
-     
         <StatusBar backgroundColor={colors.screenBackgroundColor} />
         <CommonHeader
           goBackFunction={() => {
@@ -42,7 +41,6 @@ const MainSignIn = () => {
         />
 
         <View style={styles.container}>
-        <KeyboardAvoidingView style={{width:'100%'}}>
           <View
             style={{
               flexDirection: 'row',
@@ -55,8 +53,13 @@ const MainSignIn = () => {
             <Icon
               iconName={iconConstants.mail}
               viewBox="0 0 19 15"
+              containerStyle={{
+                justifyContent:'center',
+                alignItems:'center'
+              }}
+              fillColor='#FE8270'
               size={25}
-              noStroke={'none'}
+              // noStroke={'none'}
             />
             <TextInput
               placeholder="johndoe@mail.com"
@@ -82,8 +85,14 @@ const MainSignIn = () => {
             <Icon
               iconName={iconConstants.lock}
               viewBox="0 0 18 20"
+              containerStyle={{
+                justifyContent:'center',
+                alignItems:'center'
+              }}
               size={25}
-              noStroke={'none'}
+              fillColor='#FE8270'
+              noStroke={false}
+              
             />
             <TextInput
               placeholder="*********************"
@@ -97,7 +106,6 @@ const MainSignIn = () => {
               }}
             />
           </View>
-          </KeyboardAvoidingView>
           <View
             style={{
               flexDirection: 'row',
@@ -164,7 +172,7 @@ const styles = StyleSheet.create({
   inputStyle: {
     width: '80%',
     color: colors.whiteTextColor,
-    padding: Platform.OS === 'ios' ? 15 : 10,
+    padding: 15,
     borderRadius: 20,
     backgroundColor: colors.cardBackgroundColor,
   },

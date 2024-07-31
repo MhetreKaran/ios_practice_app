@@ -108,6 +108,7 @@ const Portfolio = () => {
               initialChar={item.initialCharacter}
               price={item.price}
               profitOrLoss={item.profitOrLoss}
+              onPress={()=>navigation.navigate('CoinScreen')}
             />
           );
         }}

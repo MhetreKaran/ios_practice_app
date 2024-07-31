@@ -1,4 +1,4 @@
-import {StyleSheet, Text, View, ViewStyle} from 'react-native';
+import {StyleSheet, Text, TouchableOpacity, View, ViewStyle} from 'react-native';
 import React from 'react';
 import Icon from './Icon';
 import {colors} from '../../assets/color';
@@ -11,10 +11,11 @@ interface MarketCardProp {
   price: string;
   profitOrLoss: string;
   containerStyle?:ViewStyle;
+  onPress?:Function
 }
 const MarketCard = (props: MarketCardProp) => {
   return (
-    <View style={[styles.container,props.containerStyle]}>
+    <TouchableOpacity onPress={props.onPress} style={[styles.container,props.containerStyle]}>
       <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
         <Icon
           iconName={props.iconName}
@@ -74,7 +75,7 @@ const MarketCard = (props: MarketCardProp) => {
           {props.profitOrLoss}
         </Text>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 
