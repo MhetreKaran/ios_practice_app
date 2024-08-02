@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "590383411402",
+    "project_id": "ios-practice-app-e7968",
+    "storage_bucket": "ios-practice-app-e7968.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:590383411402:android:43af3992bc347253d58433",
+        "android_client_info": {
+          "package_name": "com.iospracticeapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCnc9O02ORO83hdNbrK08E3wM7o7IdIF9w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

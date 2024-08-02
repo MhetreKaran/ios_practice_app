@@ -1,4 +1,5 @@
 import {
+  Dimensions,
   Image,
   KeyboardAvoidingView,
   Platform,
@@ -18,7 +19,11 @@ import CommonHeader from '../components/atoms/CommonHeader';
 import Icon from '../components/atoms/Icon';
 import {iconConstants} from '../assets/svgIcon';
 import {SafeAreaView} from 'react-native-safe-area-context';
+
+const height = Dimensions.get('window').height;
 const MainSignIn = () => {
+  console.log('main sign in screen', height);
+  
   const navigation = useNavigation();
   const handleSignIn = () => {
     // navigation.dispatch(
@@ -47,8 +52,8 @@ const MainSignIn = () => {
               backgroundColor: colors.cardBackgroundColor,
               borderRadius: 50,
               paddingHorizontal: 25,
-              paddingVertical: 16,
-              marginBottom: 10,
+              paddingVertical: Platform.OS === 'ios'?16:8,
+              marginBottom: height >= 700 ? 20:10,
             }}>
             <Icon
               iconName={iconConstants.mail}
@@ -79,8 +84,8 @@ const MainSignIn = () => {
               backgroundColor: colors.cardBackgroundColor,
               borderRadius: 50,
               paddingHorizontal: 25,
-              paddingVertical: 16,
-              marginBottom: 20,
+              paddingVertical: Platform.OS === 'ios'?16:8,
+              marginBottom: height >= 700 ? 30:20,
             }}>
             <Icon
               iconName={iconConstants.lock}
@@ -166,7 +171,7 @@ const styles = StyleSheet.create({
   },
   container: {
     flex: 1,
-    marginTop: 24,
+    marginTop: height >= 700 ? 40:24,
     alignItems: 'center',
   },
   inputStyle: {

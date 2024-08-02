@@ -4,9 +4,10 @@ import {
   ScrollView,
   StyleSheet,
   Text,
+  TouchableOpacity,
   View,
 } from 'react-native';
-import React from 'react';
+import React, { useState } from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import {colors} from '../assets/color';
 import Icon from '../components/atoms/Icon';
@@ -16,10 +17,12 @@ import {useNavigation} from '@react-navigation/native';
 import CoinCard from '../components/atoms/CoinCard';
 import LongButton from '../components/atoms/LongButton';
 import DetailsCard from '../components/atoms/DetailsCard';
-import {coinDetails} from '../components/staticData';
+import {coinDetails, periodData} from '../components/staticData';
+import CandleStickCharts from '../components/molecules/CandleStickCharts';
 
 const CoinScreen = () => {
   const navigation = useNavigation();
+  const [periodActive,setPeriodActive]=useState('1D');
   return (
     <SafeAreaView style={styles.screenStyle}>
       <ScrollView scrollEnabled={true} showsVerticalScrollIndicator={false}>
@@ -101,7 +104,7 @@ const CoinScreen = () => {
             />
           </View>
         </View>
-        <Image
+        {/* <Image
           source={require('../assets/images/candlesticks.png')}
           style={{
             width: 325,
@@ -109,7 +112,31 @@ const CoinScreen = () => {
             alignSelf: 'center',
             marginBottom: 20,
           }}
-        />
+        /> */}
+        <CandleStickCharts />
+        <View
+          style={{
+            flexDirection: 'row',
+            justifyContent: 'space-between',
+            margin: 16,
+          }}>
+          {periodData.map((item,index) => {
+            return (
+              <TouchableOpacity key={index} onPress={()=>{setPeriodActive(item.time)}} style={{backgroundColor:periodActive===item.time?'#34D9D1':colors.cardBackgroundColor,borderRadius:50,paddingHorizontal:10,paddingVertical:8}} >
+                <Text
+                  style={{
+                    color: colors.whiteTextColor,
+                    fontSize: 12,
+                    fontWeight: '700',
+                    lineHeight: 14.06,
+                  }}>
+                  {item?.time}
+                </Text>
+              </TouchableOpacity>
+            );
+          })}
+        </View>
+        <ScrollView horizontal={true} style={{ width: "100%",paddingHorizontal:20 }}>
         <FlatList
           data={coinDetails}
           numColumns={2}
@@ -120,23 +147,24 @@ const CoinScreen = () => {
           ItemSeparatorComponent={<View style={{marginVertical: 10}}></View>}
           nestedScrollEnabled={true}
         />
+        </ScrollView>
         <View
           style={{
             flexDirection: 'row',
             justifyContent: 'space-between',
             marginVertical: 20,
-            paddingHorizontal:10
+            paddingHorizontal: 10,
           }}>
           <LongButton
             text={'Sell'}
             onPress={() => {}}
-            textStyle={{fontWeight:'500',fontSize:16,lineHeight:18.75}}
+            textStyle={{fontWeight: '500', fontSize: 16, lineHeight: 18.75}}
             TouchableStyle={{width: '45%', backgroundColor: '#9B87FF'}}
           />
           <LongButton
             text={'Buy'}
             onPress={() => {}}
-            textStyle={{fontWeight:'500',fontSize:16,lineHeight:18.75}}
+            textStyle={{fontWeight: '500', fontSize: 16, lineHeight: 18.75}}
             TouchableStyle={{width: '45%'}}
           />
         </View>

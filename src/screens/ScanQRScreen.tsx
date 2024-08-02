@@ -1,4 +1,4 @@
-import {Image, StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from '../components/atoms/Icon';
@@ -54,6 +54,7 @@ const ScanQRScreen = () => {
         Place QR code inside the frame to scan please avoid shake to get results
         quickly
       </Text>
+      <TouchableOpacity onPress={()=>navigation.navigate('QRScannerScreen')}>
       <Image
         source={require('../assets/images/QR-Code-Scan.png')}
         style={{
@@ -62,7 +63,7 @@ const ScanQRScreen = () => {
           alignSelf: 'center',
           marginVertical: 40,
         }}
-      />
+      /></TouchableOpacity>
       <Text style={{textAlign:'center',color:'#F8F8FB',fontWeight:'700',fontSize:20,lineHeight:23}}>70%</Text>
       <View style={styles.loadingBar}></View>
       <Text style={{textAlign:'center',color:'#F8F8FB',fontWeight:'400',fontSize:14,lineHeight:16,marginBottom:16}}>Scanning ...</Text>

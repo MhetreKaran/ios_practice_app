@@ -187,7 +187,7 @@ const AccountCard = () => {
       </View>
       <View
         style={{
-          backgroundColor: '#208DFE',
+          // backgroundColor: '#208DFE',
           paddingHorizontal: 20,
           paddingVertical: 10,
         }}>

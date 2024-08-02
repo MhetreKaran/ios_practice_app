@@ -22,9 +22,9 @@ const NotificationCard = (props: notificationCardProp) => {
         />
         <View
           style={{
+            paddingHorizontal:10,
             justifyContent: 'center',
             alignContent: 'center',
-            marginLeft: 10,
             gap: 6,
           }}>
           <Text

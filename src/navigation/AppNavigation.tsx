@@ -23,6 +23,7 @@ import Setting from '../screens/Setting';
 import ScanQRScreen from '../screens/ScanQRScreen';
 import ProfileDetailsScreen from '../screens/ProfileDetailsScreen';
 import CoinScreen from '../screens/CoinScreen';
+import QRScannerScreen from '../screens/QRScannerScreen';
 
 const AppNavigation = () => {
   const Stack = createNativeStackNavigator();
@@ -48,6 +49,7 @@ const AppNavigation = () => {
         <Stack.Screen name='ScanQRScreen' component={ScanQRScreen} />
         <Stack.Screen name='ProfileDetailsScreen' component={ProfileDetailsScreen} />
         <Stack.Screen name='CoinScreen' component={CoinScreen} />
+        <Stack.Screen name='QRScannerScreen' component={QRScannerScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )
