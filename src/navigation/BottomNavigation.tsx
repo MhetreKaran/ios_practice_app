@@ -65,10 +65,17 @@ export default BottomNavigation;
 
 const styles = StyleSheet.create({
       tabBar: {
-        height:'10%',
         backgroundColor: '#1E2230',
-        // borderTopLeftRadius:12,
-        // borderTopRightRadius:12,
+        borderTopLeftRadius:30,
+        borderTopRightRadius:30,
+        position: 'absolute',
+        bottom: 0,
+        width: '100%',
+        height: 75,
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingHorizontal: 20,
+        alignItems: 'center',
       },
     
     

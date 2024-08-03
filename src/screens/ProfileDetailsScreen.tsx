@@ -1,4 +1,4 @@
-import {Image, Platform, StyleSheet, Text, TextInput, View} from 'react-native';
+import {Image, KeyboardAvoidingView, Platform, ScrollView, StyleSheet, Text, TextInput, View} from 'react-native';
 import React from 'react';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Icon from '../components/atoms/Icon';
@@ -43,6 +43,11 @@ const ProfileDetailsScreen = () => {
           />
         </View>
       </View>
+      <KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : 'height'}
+        keyboardVerticalOffset={Platform.OS === 'ios' ? 0 : 20}
+      >
+        <ScrollView showsVerticalScrollIndicator={false} contentContainerStyle={styles.scrollViewContainer}>
       <Image
         source={require('../assets/images/profile.png')}
         style={{
@@ -94,6 +99,8 @@ const ProfileDetailsScreen = () => {
       <InputField iconName={iconConstants.edit} placeholderText='youremail@website.com'/>
       <InputField iconName={iconConstants.edit} placeholderText='Iris Watson P.O. Box 283 8562 Fusce Rd.Frederick Nebraska'/>
       <LongButton text={'Save Now'} onPress={()=>{}} TouchableStyle={{width:'95%',alignSelf:'center',marginTop:Platform.OS==='ios'?8:20}}/>
+        </ScrollView>
+        </KeyboardAvoidingView>
     </SafeAreaView>
   );
 };
@@ -105,5 +112,9 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: colors.cardBackgroundColor,
     paddingHorizontal: 16,
+  },
+  scrollViewContainer: {
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
   },
 });

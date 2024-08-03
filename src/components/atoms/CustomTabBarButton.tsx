@@ -24,9 +24,12 @@ export default CustomTabBarButton;
 
 const styles = StyleSheet.create({
   customButton: {
-    justifyContent: 'space-evenly',
+    // justifyContent: 'space-evenly',
+    // alignItems: 'center',
+    // marginHorizontal: Platform.OS === 'ios' ? 24 : 27,
+    width: '20%',
     alignItems: 'center',
-    marginHorizontal: Platform.OS === 'ios' ? 24 : 27,
+    justifyContent: 'center',
   },
   buttonText: {},
 });
