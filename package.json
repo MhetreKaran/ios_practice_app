@@ -19,7 +19,11 @@
     "@react-navigation/material-bottom-tabs": "^6.2.28",
     "@react-navigation/native": "^6.1.17",
     "@react-navigation/native-stack": "^6.10.0",
+    "@zegocloud/zego-uikit-prebuilt-live-streaming-rn": "^2.3.1",
+    "@zegocloud/zego-uikit-prebuilt-video-conference-rn": "^1.1.0",
+    "@zegocloud/zego-uikit-rn": "^2.13.1",
     "react": "18.2.0",
+    "react-delegate-component": "^1.0.0",
     "react-native": "0.74.3",
     "react-native-gesture-handler": "^2.18.0",
     "react-native-haptic-feedback": "^2.2.0",
@@ -33,7 +37,8 @@
     "react-native-svg": "^15.3.0",
     "react-native-vector-icons": "^10.1.0",
     "react-native-vision-camera": "^4.5.1",
-    "react-native-wagmi-charts": "^2.5.2"
+    "react-native-wagmi-charts": "^2.5.2",
+    "zego-express-engine-reactnative": "^3.14.5"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
