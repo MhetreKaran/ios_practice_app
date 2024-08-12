@@ -2280,6 +2280,26 @@
   resolved "https://registry.npmjs.org/@ungap/structured-clone/-/structured-clone-1.2.0.tgz"
   integrity sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==
 
+"@zegocloud/zego-uikit-prebuilt-live-streaming-rn@^2.3.1":
+  version "2.3.1"
+  resolved "https://registry.npmjs.org/@zegocloud/zego-uikit-prebuilt-live-streaming-rn/-/zego-uikit-prebuilt-live-streaming-rn-2.3.1.tgz"
+  integrity sha512-EmizbbV/WaY3AoH9yIlcBtw1qbgJDSqgOysSPgqmapTpaP3rtatT1ZendX5VA3xIuUzTjmJV6/djN4SVRMhgZQ==
+
+"@zegocloud/zego-uikit-prebuilt-video-conference-rn@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/@zegocloud/zego-uikit-prebuilt-video-conference-rn/-/zego-uikit-prebuilt-video-conference-rn-1.1.0.tgz"
+  integrity sha512-JQnjW7i8fGfSlBwvTcI68V+LX7dm7I7lOKkCi1u5NOcOF+IOfcGfAFcm50xFhPsbwZK0UaSkC78q6nsN2SW5Aw==
+
+"@zegocloud/zego-uikit-rn@^2.13.1":
+  version "2.13.1"
+  resolved "https://registry.npmjs.org/@zegocloud/zego-uikit-rn/-/zego-uikit-rn-2.13.1.tgz"
+  integrity sha512-m9QZAzUPsRbYcLQ2eMUoX0zajwmFmEIO4NRKCpydrYWDo9n/rmMVyTnu4Qpf5HRsEwWkkvh/Q8e/0GBpspmlnw==
+  dependencies:
+    react-delegate-component "^1.0.0"
+    zego-express-engine-reactnative "3.14.5"
+    zego-zim-react-native "2.12.1"
+    zego-zpns-react-native "2.5.2-alpha"
+
 abort-controller@^3.0.0:
   version "3.0.0"
   resolved "https://registry.npmjs.org/abort-controller/-/abort-controller-3.0.0.tgz"
@@ -3944,6 +3964,11 @@ fs.realpath@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/fs.realpath/-/fs.realpath-1.0.0.tgz"
   integrity sha512-OO0pH2lK6a0hZnAdau5ItzHPI6pUlvI7jMVnxUQRtw4owF2wk8lOSabtGDCTP4Ggrg2MbGnWO9X8K1t4+fGMDw==
+
+fsevents@^2.3.2:
+  version "2.3.3"
+  resolved "https://registry.npmjs.org/fsevents/-/fsevents-2.3.3.tgz"
+  integrity sha512-5xoDfX+fL7faATnagmWPpbFtwh/R77WmMMqqHGS65C3vvB0YHrgF+B1YmZ3441tMj5n63k0212XNoJwzlhffQw==
 
 function-bind@^1.1.2:
   version "1.1.2"
@@ -6002,7 +6027,7 @@ prompts@^2.0.1, prompts@^2.4.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.7.2, prop-types@^15.8.1:
+prop-types@^15.6.0, prop-types@^15.7.2, prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -6052,6 +6077,13 @@ range-parser@~1.2.1:
   version "1.2.1"
   resolved "https://registry.npmjs.org/range-parser/-/range-parser-1.2.1.tgz"
   integrity sha512-Hrgsx+orqoygnmhFbKaHE6c296J+HTAQXoxEF6gNupROmmGJRoyzfG3ccAveqCBrwr/2yxQ5BVd/GTl5agOwSg==
+
+react-delegate-component@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/react-delegate-component/-/react-delegate-component-1.0.0.tgz"
+  integrity sha512-xdpNHPoiBQF0Ob4z5EqQUEK2sBjy0ooXe9xqsLlaA19l5dUASu3mIkfXMdBmMLCSfByPa0NluEN6BUDaI5EnlQ==
+  dependencies:
+    prop-types "^15.6.0"
 
 react-devtools-core@^5.0.0:
   version "5.3.1"
@@ -6270,7 +6302,7 @@ react-test-renderer@18.2.0:
     react-shallow-renderer "^16.15.0"
     scheduler "^0.23.0"
 
-react@18.2.0:
+react@*, "react@^16.0.0 || ^17.0.0 || ^18.0.0", react@^18.2.0, react@>=15.0.0, react@>=16.3.0, react@>=16.8, react@>=17.0.0, react@>=18.1.0, react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   integrity sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==
@@ -7478,3 +7510,18 @@ yocto-queue@^0.1.0:
   version "0.1.0"
   resolved "https://registry.npmjs.org/yocto-queue/-/yocto-queue-0.1.0.tgz"
   integrity sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==
+
+zego-express-engine-reactnative@^3.14.5, zego-express-engine-reactnative@3.14.5:
+  version "3.14.5"
+  resolved "https://registry.npmjs.org/zego-express-engine-reactnative/-/zego-express-engine-reactnative-3.14.5.tgz"
+  integrity sha512-69jy89OFg5eog6Wxhe8Wl67zcAz3fA+Jdz6T2aSBA2dtFNT07dbeoK51743TjZ1yKM3rkAwe2MhNzYOpfZ8xug==
+
+zego-zim-react-native@2.12.1:
+  version "2.12.1"
+  resolved "https://registry.npmjs.org/zego-zim-react-native/-/zego-zim-react-native-2.12.1.tgz"
+  integrity sha512-992pMz47Zg3QYii2vcB+JkQBYmJ0qV6uLH2gHPLpN+FBTr5AEBW6EbLju2BR0nf+zdtck7BrS1zxzralR1pvGQ==
+
+zego-zpns-react-native@2.5.2-alpha:
+  version "2.5.2-alpha"
+  resolved "https://registry.npmjs.org/zego-zpns-react-native/-/zego-zpns-react-native-2.5.2-alpha.tgz"
+  integrity sha512-ta36wt7CmMpSWCxs1DOpQECvTK9dzo2pl2EFdUhuUqPrt/+0Y0j0+hmP2VYX9ScFjwAY0jfHVpVzGMe+GHwjVQ==
